@@ -4,7 +4,7 @@ This is ERD, using [React](https://reactjs.org/) and [Laravel](https://laravel.c
 
 ## Example
 
-![Google Structured data Entity-Relationship Diagram](./docs/erd.png?raw=true "Google Structured data Entity-Relationship Diagram")
+![Google Structured data Entity-Relationship Diagram](./docs/images/erd.png?raw=true "Google Structured data Entity-Relationship Diagram")
 
 This ERD is made with [Database schema designer](https://github.com/Agontuk/schema-designer).
 
