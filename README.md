@@ -4,6 +4,8 @@ This is ERD, using [React](https://reactjs.org/) and [Laravel](https://laravel.c
 
 ## [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) conform [Google Search](https://developers.google.com/search) [Structured data](https://developers.google.com/search/docs/data-types/local-business) Example
 
+Par example, Organizations of Persons for SaaS.
+
 ![SaaS Google Structured data Entity-Relationship Diagram](./docs/saas/erd.png?raw=true "SaaS Google Structured data Entity-Relationship Diagram")
 
 This ERD is made with [Database schema designer](https://github.com/Agontuk/schema-designer).
