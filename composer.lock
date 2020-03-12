@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6558f74828bca9ebecac73d90cea4b1a",
+    "content-hash": "581beaab3b0be0b8fec62e3198c33aef",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -3835,6 +3835,53 @@
             "time": "2016-01-20T08:20:44+00:00"
         },
         {
+            "name": "league/flysystem-ziparchive",
+            "version": "1.0.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/flysystem-ziparchive.git",
+                "reference": "c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-ziparchive/zipball/c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45",
+                "reference": "c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45",
+                "shasum": ""
+            },
+            "require": {
+                "ext-zip": "*",
+                "league/flysystem": "~1.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "League\\Flysystem\\ZipArchive\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
+                }
+            ],
+            "description": "Flysystem adapter for ZipArchive's",
+            "time": "2016-12-20T08:36:16+00:00"
+        },
+        {
             "name": "mockery/mockery",
             "version": "1.3.1",
             "source": {
@@ -3946,6 +3993,60 @@
                 "object graph"
             ],
             "time": "2020-01-17T21:11:47+00:00"
+        },
+        {
+            "name": "noud/schema-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noud/schema-builder.git",
+                "reference": "d4132b44d9ac053c7f13d93265e2763d7d1cabb0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noud/schema-builder/zipball/d4132b44d9ac053c7f13d93265e2763d7d1cabb0",
+                "reference": "d4132b44d9ac053c7f13d93265e2763d7d1cabb0",
+                "shasum": ""
+            },
+            "require": {
+                "ext-zip": "*",
+                "illuminate/filesystem": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.0.*|6.2.*|6.4.*|6.5.*|6.8.*|6.12.*|6.18.*|7.0.*|7.1.*",
+                "illuminate/http": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.0.*|6.2.*|6.4.*|6.5.*|6.8.*|6.12.*|6.18.*|7.0.*|7.1.*",
+                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.0.*|6.2.*|6.4.*|6.5.*|6.8.*|6.12.*|6.18.*|7.0.*|7.1.*",
+                "league/flysystem": "^1.0",
+                "league/flysystem-ziparchive": "^1.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Agontuk\\Schema\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iftekhar Rifat",
+                    "email": "rifat662@gmail.com",
+                    "homepage": "https://github.com/Agontuk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Schema designer & migration generator for laravel & lumen",
+            "homepage": "https://github.com/noud/schema-builder",
+            "keywords": [
+                "database",
+                "migration generator",
+                "schema",
+                "schema builder",
+                "schema design"
+            ],
+            "time": "2020-03-12T21:58:16+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -5443,7 +5544,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "noud/schema-builder": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
