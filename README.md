@@ -2,6 +2,8 @@
 
 This is ERD, using [React](https://reactjs.org/) and [Laravel](https://laravel.com/).
 
+## Example
+
 ![Google Structured data Entity-Relationship Diagram](./docs/erd.png?raw=true "Google Structured data Entity-Relationship Diagram")
 
 This ERD is made with [Database schema designer](https://github.com/Agontuk/schema-designer).
