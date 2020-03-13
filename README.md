@@ -8,9 +8,15 @@ SaaS, Organizations of Persons.
 
 ![SaaS Entity-Relationship Diagram](./docs/saas/erd.png?raw=true "SaaS Entity-Relationship Diagram")
 
+### [OAuth 2.0](https://en.wikipedia.org/wiki/OAuth#OAuth_2.0)
+
+OAuth 2.0, Users.
+
+![OAuth Entity-Relationship Diagram](./docs/oauth/erd.png?raw=true "OAuth Entity-Relationship Diagram")
+
 ### [Laravel](https://laravel.com/)
 
-Laravel Users and FailedJobes for it's queue system.
+FailedJobes queue system, contributing to scalability.
 
 ![Laravel Entity-Relationship Diagram](./docs/laravel/erd.png?raw=true "Laravel Entity-Relationship Diagram")
 
