@@ -1,6 +1,6 @@
-# Layered [Entity-Relationship Diagrams (ERDs)](https://en.wikipedia.org/wiki/Entity–relationship_model)
+# [Entity-Relationship Diagram (ERD)](https://en.wikipedia.org/wiki/Entity–relationship_model)
 
-## Schemas
+## Layered Schemas
 
 ### [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) conform [Google Search](https://developers.google.com/search) [Structured data](https://developers.google.com/search/docs/data-types/local-business)
 
