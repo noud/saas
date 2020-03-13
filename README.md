@@ -10,7 +10,7 @@ SaaS, Organizations of Persons.
 
 ### [Laravel](https://laravel.com/)
 
-Laravel Users.
+Laravel Users and FailedJobes for it's queue system.
 
 ![Laravel Entity-Relationship Diagram](./docs/laravel/erd.png?raw=true "Laravel Entity-Relationship Diagram")
 
