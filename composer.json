@@ -12,8 +12,11 @@
         "fideloper/proxy": "^4.2",
         "fruitcake/laravel-cors": "^1.0",
         "guzzlehttp/guzzle": "^6.3",
+        "joselfonseca/lighthouse-graphql-passport-auth": "^4.1",
         "laravel/framework": "^7.0",
-        "laravel/tinker": "^2.0"
+        "laravel/passport": "^8.4",
+        "laravel/tinker": "^2.0",
+        "nuwave/lighthouse": "^4.10"
     },
     "require-dev": {
         "facade/ignition": "^2.0",
