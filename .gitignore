@@ -1,6 +1,18 @@
+# customized
+
+app/Models/Laravel
+!app/Models/Laravel/User.php
+app/Models/SaaS
+
+# generated
+
+app/Models/Laravel/Base
+app/Models/SaaS/Base
 database/migrations
 !database/migrations/2014_10_12_000000_create_users_table.php
 !database/migrations/2019_08_19_000000_create_failed_jobs_table.php
+
+# standard Laravel
 
 /node_modules
 /public/hot
