@@ -16,3 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::group(['as' => 'email.'], function () {
+    Route::get('emails', 'EmailController@index')->name('emails');
+});
