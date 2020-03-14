@@ -47,32 +47,32 @@
         },
         "positions": {
             "8zuxp5": {
-                "x": 50,
-                "y": 81
-            },
-            "cf84s": {
-                "x": 44,
-                "y": 735
+                "x": 51,
+                "y": 50
             },
             "z41ydq": {
-                "x": 383,
-                "y": 380
+                "x": 425,
+                "y": 320
             },
             "atzgp": {
-                "x": 347,
-                "y": 78
+                "x": 362,
+                "y": 15
             },
             "z381fc": {
-                "x": 692,
-                "y": 69
+                "x": 644,
+                "y": 17
             },
             "2c8l6k": {
-                "x": 356,
-                "y": 657
+                "x": 50,
+                "y": 389
             },
             "lzwtu": {
-                "x": 671,
-                "y": 624
+                "x": 395,
+                "y": 603
+            },
+            "f9wh7j": {
+                "x": 684,
+                "y": 596
             }
         }
     },
@@ -81,13 +81,6 @@
             "id": "8zuxp5",
             "name": "user",
             "color": "table-header-green",
-            "softDelete": false,
-            "timeStamp": true
-        },
-        {
-            "id": "cf84s",
-            "name": "failed_job",
-            "color": "table-header-blue",
             "softDelete": false,
             "timeStamp": true
         },
@@ -123,6 +116,13 @@
             "id": "lzwtu",
             "name": "oauth_personal_access_clients",
             "color": "table-header-red",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "f9wh7j",
+            "name": "password_resets",
+            "color": "table-header-blue",
             "softDelete": false,
             "timeStamp": true
         }
@@ -299,146 +299,6 @@
                 "comment": "",
                 "autoInc": false,
                 "nullable": true,
-                "unique": false,
-                "index": false,
-                "unsigned": false,
-                "foreignKey": {
-                    "references": {
-                        "id": "",
-                        "name": ""
-                    },
-                    "on": {
-                        "id": "",
-                        "name": ""
-                    }
-                }
-            }
-        ],
-        "cf84s": [
-            {
-                "id": "rtnu6",
-                "name": "id",
-                "type": "bigInteger",
-                "length": "",
-                "defValue": "",
-                "comment": "",
-                "autoInc": true,
-                "nullable": false,
-                "unique": true,
-                "index": true,
-                "unsigned": true,
-                "foreignKey": {
-                    "references": {
-                        "id": "",
-                        "name": ""
-                    },
-                    "on": {
-                        "id": "",
-                        "name": ""
-                    }
-                }
-            },
-            {
-                "id": "cy44sa",
-                "name": "connection",
-                "type": "text",
-                "length": "",
-                "defValue": "",
-                "comment": "",
-                "autoInc": false,
-                "nullable": false,
-                "unique": false,
-                "index": false,
-                "unsigned": false,
-                "foreignKey": {
-                    "references": {
-                        "id": "",
-                        "name": ""
-                    },
-                    "on": {
-                        "id": "",
-                        "name": ""
-                    }
-                }
-            },
-            {
-                "id": "ft2fzd",
-                "name": "queue",
-                "type": "text",
-                "length": "",
-                "defValue": "",
-                "comment": "",
-                "autoInc": false,
-                "nullable": false,
-                "unique": false,
-                "index": false,
-                "unsigned": false,
-                "foreignKey": {
-                    "references": {
-                        "id": "",
-                        "name": ""
-                    },
-                    "on": {
-                        "id": "",
-                        "name": ""
-                    }
-                }
-            },
-            {
-                "id": "odczx7",
-                "name": "payload",
-                "type": "longText",
-                "length": "",
-                "defValue": "",
-                "comment": "",
-                "autoInc": false,
-                "nullable": false,
-                "unique": false,
-                "index": false,
-                "unsigned": false,
-                "foreignKey": {
-                    "references": {
-                        "id": "",
-                        "name": ""
-                    },
-                    "on": {
-                        "id": "",
-                        "name": ""
-                    }
-                }
-            },
-            {
-                "id": "4q1f5h",
-                "name": "exception",
-                "type": "longText",
-                "length": "",
-                "defValue": "",
-                "comment": "",
-                "autoInc": false,
-                "nullable": false,
-                "unique": false,
-                "index": false,
-                "unsigned": false,
-                "foreignKey": {
-                    "references": {
-                        "id": "",
-                        "name": ""
-                    },
-                    "on": {
-                        "id": "",
-                        "name": ""
-                    }
-                }
-            },
-            {
-                "id": "vjnqbc",
-                "name": "failed_at",
-                "type": "timestamp",
-                "length": "",
-                "defValue": "",
-                "comment": "",
-                "autoInc": false,
-                "nullable": false,
                 "unique": false,
                 "index": false,
                 "unsigned": false,
@@ -1081,6 +941,54 @@
                     "on": {
                         "id": "2c8l6k",
                         "name": "oauth_clients"
+                    }
+                }
+            }
+        ],
+        "f9wh7j": [
+            {
+                "id": "g5nv9j",
+                "name": "email",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "amkqz4",
+                "name": "token",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
                     }
                 }
             }
