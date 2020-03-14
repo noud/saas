@@ -23,7 +23,6 @@ type Mutation {
     updatePassword(input: UpdatePassword! @spread): UpdatePasswordResponse! @field(resolver: "Joselfonseca\\LighthouseGraphQLPassport\\GraphQL\\Mutations\\UpdatePassword@resolve") @guard(with: ["api"])
 }
 
-
 type User {
     id: ID!
     name: String!
