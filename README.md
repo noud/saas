@@ -11,7 +11,6 @@
 
 ### [OAuth 2.0](https://en.wikipedia.org/wiki/OAuth#OAuth_2.0)
 
-- OAuth 2.0
 - Users
 
 ![OAuth Entity-Relationship Diagram](./docs/oauth/erd.png?raw=true "OAuth Entity-Relationship Diagram")
