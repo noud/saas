@@ -4,25 +4,29 @@
 
 ### [SaaS](https://en.wikipedia.org/wiki/Software_as_a_service) conform [Google Search](https://developers.google.com/search) [Structured data](https://developers.google.com/search/docs/data-types/local-business)
 
-SaaS, Organizations of Persons.
+- Organizations
+- Persons
 
 ![SaaS Entity-Relationship Diagram](./docs/saas/erd.png?raw=true "SaaS Entity-Relationship Diagram")
 
 ### [OAuth 2.0](https://en.wikipedia.org/wiki/OAuth#OAuth_2.0)
 
-OAuth 2.0, Users.
+- OAuth 2.0
+- Users
 
 ![OAuth Entity-Relationship Diagram](./docs/oauth/erd.png?raw=true "OAuth Entity-Relationship Diagram")
 
 ### [Laravel](https://laravel.com/)
 
-FailedJobes queue system, contributing to scalability.
+- FailedJobes queue system, contributing to scalability
+- PasswordResets
+- Users
 
 ![Laravel Entity-Relationship Diagram](./docs/laravel/erd.png?raw=true "Laravel Entity-Relationship Diagram")
 
 ### ERD
 
-ERD Tables.
+- DataBaseTables
 
 ![ERD Entity-Relationship Diagram](./docs/erd/erd.png?raw=true "ERD Entity-Relationship Diagram")
 

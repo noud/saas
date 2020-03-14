@@ -69,10 +69,6 @@
             "lzwtu": {
                 "x": 395,
                 "y": 603
-            },
-            "f9wh7j": {
-                "x": 684,
-                "y": 596
             }
         }
     },
@@ -116,13 +112,6 @@
             "id": "lzwtu",
             "name": "oauth_personal_access_clients",
             "color": "table-header-red",
-            "softDelete": false,
-            "timeStamp": true
-        },
-        {
-            "id": "f9wh7j",
-            "name": "password_resets",
-            "color": "table-header-blue",
             "softDelete": false,
             "timeStamp": true
         }
@@ -941,54 +930,6 @@
                     "on": {
                         "id": "2c8l6k",
                         "name": "oauth_clients"
-                    }
-                }
-            }
-        ],
-        "f9wh7j": [
-            {
-                "id": "g5nv9j",
-                "name": "email",
-                "type": "string",
-                "length": "",
-                "defValue": "",
-                "comment": "",
-                "autoInc": false,
-                "nullable": false,
-                "unique": false,
-                "index": true,
-                "unsigned": false,
-                "foreignKey": {
-                    "references": {
-                        "id": "",
-                        "name": ""
-                    },
-                    "on": {
-                        "id": "",
-                        "name": ""
-                    }
-                }
-            },
-            {
-                "id": "amkqz4",
-                "name": "token",
-                "type": "string",
-                "length": "",
-                "defValue": "",
-                "comment": "",
-                "autoInc": false,
-                "nullable": false,
-                "unique": false,
-                "index": false,
-                "unsigned": false,
-                "foreignKey": {
-                    "references": {
-                        "id": "",
-                        "name": ""
-                    },
-                    "on": {
-                        "id": "",
-                        "name": ""
                     }
                 }
             }
