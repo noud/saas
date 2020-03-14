@@ -380,7 +380,49 @@
 				"body": {
 					"mode": "graphql",
 					"graphql": {
-						"query": "{\n  users(first: 20){\n    data {\n      id\n      email\n    }\n  }\n}",
+						"query": "{\n  users(first: 20){\n    data {\n      id\n      name\n      email\n    }\n  }\n}",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/graphql",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"graphql"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIyIiwianRpIjoiNmM3NjM3ODgzNjAzMTYwZGVjYWNhMDEwODlmMjY4NTc2OTMyMmM5MGQ3ZWVlMTczYzUzNTdjZDkzNzkzYWIzYTJhMTEwOWFlNjBjZWU5YmQiLCJpYXQiOjE1ODQxNTQxOTQsIm5iZiI6MTU4NDE1NDE5NCwiZXhwIjoxNjE1NjkwMTk0LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.KhK3EmpySA8YG2lO11DxLqq8ZFZJAdOY0P2e82dB2lIpyxYJbU1T16Cn7XtXzpr7OD_1oA0ZEVz5Qbj6sba7DHOIdWVZdqMCOWEvBQSagPSaSmUtF-8uC2TWH87hhQ1kMAyq-VDF0CbuHUTWrlrGHHpAJrQ7AfMpHYdY9QxKulWPoRMzv850wnAhytpG_m5S5r8E7eQFCvt7oD1q2hBxM3YVV6JRkYPHde7L1gDHdXVr1YX-j3Y8xhH8fNgGxaie1kM10XkXWi7jtCHXuUVxgTyY6s-lJh80hsrSk0yNPYcV1erP-BU6sVsd3Q32FK-2acN3nl4Ljcc-ECd_IIDFx59YX1MLeamrEOR7CiRRrSUYNUoaavOxg5xSpjiTVEp3cJ8IB8mf1aiI0Cqx251FmZcovtfZLamiwhM0sGsml6DDP3y7FJyftazToXH5LoZYwPpWD7SiYgj_CN_7FUI0Hu7FGidPm_xIFFL1aGBad_bcJJQ0basYJGIGgZhw1s3Zn-Z_QoQAcFQDpufth-zG-i0Zri7GKi0JfU-8wPbj25jUXWxBybejcgNJk4EX--1oHyPJCN0AM0Y7SOrT6sASihZQQlscIcBR6fX8wV-jhrsNH39gQYKXh3Z3HaTNc4Hs1AJCbohop806Fv9prB7BrzRX3H8z1L5G9G826cEdAWM",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "{\n  user(id: 1){\n      name\n      email\n  }\n}",
 						"variables": ""
 					}
 				},

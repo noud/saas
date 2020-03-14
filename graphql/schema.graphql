@@ -4,10 +4,10 @@ scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date
 "A date string with format `Y-m-d`, e.g. `2011-05-23`."
 scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 
-type Query {
+type Query @middleware(checks: ["auth:api"]) {
     # users: [User!]! @paginate(defaultCount: 10)
-    users: [User!]! @middleware(checks: ["auth:api"]) @paginate(defaultCount: 10)
-    # users: [User!]! @middleware(checks: ["auth:api"]) @paginate(type: "paginator" model: "App\\User")
+    users: [User!]! @paginate(defaultCount: 10)
+    # users: [User!]! @paginate(type: "paginator" model: "App\\User")
     user(id: ID @eq): User @find
 }
 
