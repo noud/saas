@@ -1,0 +1,1230 @@
+{
+    "database": {
+        "name": "images"
+    },
+    "ui": {
+        "database": {
+            "showModal": false,
+            "edit": false
+        },
+        "table": {
+            "showModal": false,
+            "edit": false,
+            "editData": {
+                "id": "",
+                "name": "",
+                "softDelete": false,
+                "timeStamp": true
+            }
+        },
+        "column": {
+            "showModal": false,
+            "edit": false,
+            "editData": {
+                "id": "",
+                "name": "",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            "tableId": ""
+        },
+        "positions": {
+            "knxwwq": {
+                "x": 47,
+                "y": 292
+            },
+            "fnvue5": {
+                "x": 325,
+                "y": 284
+            },
+            "ma1cq": {
+                "x": 656,
+                "y": 15
+            },
+            "rchz4n": {
+                "x": 689,
+                "y": 299
+            },
+            "v5e11l": {
+                "x": 663,
+                "y": 481
+            },
+            "u8m7lb": {
+                "x": 51,
+                "y": 461
+            },
+            "63shy6": {
+                "x": 339,
+                "y": 20
+            },
+            "pw67v6": {
+                "x": 27,
+                "y": 21
+            },
+            "j0n7js": {
+                "x": 659,
+                "y": 709
+            },
+            "g7ti9j": {
+                "x": 339,
+                "y": 697
+            }
+        }
+    },
+    "tables": [
+        {
+            "id": "knxwwq",
+            "name": "image_types",
+            "color": "table-header-blue",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "fnvue5",
+            "name": "images",
+            "color": "table-header-green",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "ma1cq",
+            "name": "accounts",
+            "color": "table-header-purple",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "rchz4n",
+            "name": "account_images",
+            "color": "table-header-blue",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "v5e11l",
+            "name": "uploaded_images",
+            "color": "table-header-red",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "u8m7lb",
+            "name": "extensions",
+            "color": "table-header-blue",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "63shy6",
+            "name": "image_categories",
+            "color": "table-header-purple",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "pw67v6",
+            "name": "image_category_types",
+            "color": "table-header-purple",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "j0n7js",
+            "name": "abuse_categories",
+            "color": "table-header-red",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "g7ti9j",
+            "name": "abused_images",
+            "color": "table-header-blue",
+            "softDelete": false,
+            "timeStamp": true
+        }
+    ],
+    "columns": {
+        "knxwwq": [
+            {
+                "id": "dpoong",
+                "name": "id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "9lqywi",
+                "name": "name",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": true,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "fnvue5": [
+            {
+                "id": "ujzvtu",
+                "name": "id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "7zm6d",
+                "name": "image_type_id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "dpoong",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "knxwwq",
+                        "name": "image_types"
+                    }
+                }
+            },
+            {
+                "id": "nge7tn",
+                "name": "filename",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "6p20hs",
+                "name": "filename_extension_id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "2o7nu",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "u8m7lb",
+                        "name": "extensions"
+                    }
+                }
+            },
+            {
+                "id": "8u0e0e",
+                "name": "uploaded_at",
+                "type": "timestamp",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "zrq5fn",
+                "name": "uploaded_with_time",
+                "type": "boolean",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "6fbd5x",
+                "name": "height",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "id9u4",
+                "name": "width",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "kdwd2",
+                "name": "shortcut",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "ma1cq": [
+            {
+                "id": "40r6xi",
+                "name": "id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "2ucv2h",
+                "name": "name",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "y2lzgh",
+                "name": "email",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": true,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "upvnhn",
+                "name": "email_verified_at",
+                "type": "timestamp",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "3pzw0f",
+                "name": "password",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "o6pyyt",
+                "name": "remember_token",
+                "type": "string",
+                "length": "100",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "rchz4n": [
+            {
+                "id": "190rpa",
+                "name": "id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "i2kvs",
+                "name": "account_id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "40r6xi",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "ma1cq",
+                        "name": "accounts"
+                    }
+                }
+            },
+            {
+                "id": "8905s",
+                "name": "image_id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "ujzvtu",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "fnvue5",
+                        "name": "images"
+                    }
+                }
+            }
+        ],
+        "v5e11l": [
+            {
+                "id": "zzba0l",
+                "name": "id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "55p2rg",
+                "name": "account_image_id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "190rpa",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "rchz4n",
+                        "name": "account_images"
+                    }
+                }
+            },
+            {
+                "id": "863dxf",
+                "name": "uuid",
+                "type": "string",
+                "length": "36",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "0ywqd",
+                "name": "shortcut",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "u8m7lb": [
+            {
+                "id": "2o7nu",
+                "name": "id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "8btx0o",
+                "name": "image_type_id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "dpoong",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "knxwwq",
+                        "name": "image_types"
+                    }
+                }
+            },
+            {
+                "id": "nuqjc6",
+                "name": "extension",
+                "type": "string",
+                "length": "4",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "63shy6": [
+            {
+                "id": "b6y1wn",
+                "name": "id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "qfzb7o",
+                "name": "image_category_type_id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "6itl16",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "pw67v6",
+                        "name": "image_category_types"
+                    }
+                }
+            },
+            {
+                "id": "2lxzn",
+                "name": "image_category_type_order",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "t0dmk",
+                "name": "image_id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "ujzvtu",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "fnvue5",
+                        "name": "images"
+                    }
+                }
+            }
+        ],
+        "pw67v6": [
+            {
+                "id": "6itl16",
+                "name": "id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "1hrd4",
+                "name": "shortcut",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "ozecqj",
+                "name": "uri_part_path",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "2oqgt",
+                "name": "uri_part_date",
+                "type": "boolean",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "wrvvlm",
+                "name": "uploadable",
+                "type": "boolean",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "j0n7js": [
+            {
+                "id": "0dalkd",
+                "name": "id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "vavitp",
+                "name": "shortcut",
+                "type": "string",
+                "length": "11",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "g7ti9j": [
+            {
+                "id": "4xxaj9",
+                "name": "id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "d6z6mm",
+                "name": "image_id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "ujzvtu",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "fnvue5",
+                        "name": "images"
+                    }
+                }
+            },
+            {
+                "id": "kadr2i",
+                "name": "abuse_category_id",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "0dalkd",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "j0n7js",
+                        "name": "abuse_categories"
+                    }
+                }
+            }
+        ]
+    },
+    "relations": [
+        {
+            "source": {
+                "columnId": "8905s",
+                "tableId": "rchz4n"
+            },
+            "target": {
+                "columnId": "ujzvtu",
+                "tableId": "fnvue5"
+            }
+        },
+        {
+            "source": {
+                "columnId": "i2kvs",
+                "tableId": "rchz4n"
+            },
+            "target": {
+                "columnId": "40r6xi",
+                "tableId": "ma1cq"
+            }
+        },
+        {
+            "source": {
+                "columnId": "7zm6d",
+                "tableId": "fnvue5"
+            },
+            "target": {
+                "columnId": "dpoong",
+                "tableId": "knxwwq"
+            }
+        },
+        {
+            "source": {
+                "columnId": "55p2rg",
+                "tableId": "v5e11l"
+            },
+            "target": {
+                "columnId": "190rpa",
+                "tableId": "rchz4n"
+            }
+        },
+        {
+            "source": {
+                "columnId": "8btx0o",
+                "tableId": "u8m7lb"
+            },
+            "target": {
+                "columnId": "dpoong",
+                "tableId": "knxwwq"
+            }
+        },
+        {
+            "source": {
+                "columnId": "t0dmk",
+                "tableId": "63shy6"
+            },
+            "target": {
+                "columnId": "ujzvtu",
+                "tableId": "fnvue5"
+            }
+        },
+        {
+            "source": {
+                "columnId": "qfzb7o",
+                "tableId": "63shy6"
+            },
+            "target": {
+                "columnId": "6itl16",
+                "tableId": "pw67v6"
+            }
+        },
+        {
+            "source": {
+                "columnId": "6p20hs",
+                "tableId": "fnvue5"
+            },
+            "target": {
+                "columnId": "2o7nu",
+                "tableId": "u8m7lb"
+            }
+        },
+        {
+            "source": {
+                "columnId": "d6z6mm",
+                "tableId": "g7ti9j"
+            },
+            "target": {
+                "columnId": "ujzvtu",
+                "tableId": "fnvue5"
+            }
+        },
+        {
+            "source": {
+                "columnId": "kadr2i",
+                "tableId": "g7ti9j"
+            },
+            "target": {
+                "columnId": "0dalkd",
+                "tableId": "j0n7js"
+            }
+        }
+    ]
+}

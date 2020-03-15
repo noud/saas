@@ -165,6 +165,7 @@ return [
         /*
          * Package Service Providers...
          */
+        \Agontuk\Schema\SchemaServiceProvider::class,
         Torzer\Awesome\Landlord\LandlordServiceProvider::class,
 
         /*

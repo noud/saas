@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e3a8981684ccdd57c9f63403ce260ffa",
+    "content-hash": "2a31e5289b87d87c6653133e8831155f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -1035,16 +1035,16 @@
         },
         {
             "name": "laravel/framework",
-            "version": "v7.1.1",
+            "version": "v7.1.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/framework.git",
-                "reference": "b0328b500dfff44e75af103d57d81cdee83e5ce9"
+                "reference": "42b311862adfc36b8628ac62d226a3682f463439"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/framework/zipball/b0328b500dfff44e75af103d57d81cdee83e5ce9",
-                "reference": "b0328b500dfff44e75af103d57d81cdee83e5ce9",
+                "url": "https://api.github.com/repos/laravel/framework/zipball/42b311862adfc36b8628ac62d226a3682f463439",
+                "reference": "42b311862adfc36b8628ac62d226a3682f463439",
                 "shasum": ""
             },
             "require": {
@@ -1132,7 +1132,7 @@
                 "ext-memcached": "Required to use the memcache cache driver.",
                 "ext-pcntl": "Required to use all features of the queue worker.",
                 "ext-posix": "Required to use all features of the queue worker.",
-                "ext-redis": "Required to use the Redis cache and queue drivers.",
+                "ext-redis": "Required to use the Redis cache and queue drivers (^4.0|^5.0).",
                 "filp/whoops": "Required for friendly error pages in development (^2.4).",
                 "fzaninotto/faker": "Required to use the eloquent factory builder (^1.9.1).",
                 "guzzlehttp/guzzle": "Required to use the HTTP Client, Mailgun mail driver and the ping methods on schedules (^6.3.1|^7.0).",
@@ -1182,7 +1182,7 @@
                 "framework",
                 "laravel"
             ],
-            "time": "2020-03-12T13:06:49+00:00"
+            "time": "2020-03-14T14:33:32+00:00"
         },
         {
             "name": "laravel/passport",
@@ -4615,16 +4615,16 @@
         },
         {
             "name": "voku/portable-ascii",
-            "version": "1.4.9",
+            "version": "1.4.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/voku/portable-ascii.git",
-                "reference": "9fd2b224c71448b5f84aef9d499a1428d79776a2"
+                "reference": "240e93829a5f985fab0984a6e55ae5e26b78a334"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/9fd2b224c71448b5f84aef9d499a1428d79776a2",
-                "reference": "9fd2b224c71448b5f84aef9d499a1428d79776a2",
+                "url": "https://api.github.com/repos/voku/portable-ascii/zipball/240e93829a5f985fab0984a6e55ae5e26b78a334",
+                "reference": "240e93829a5f985fab0984a6e55ae5e26b78a334",
                 "shasum": ""
             },
             "require": {
@@ -4660,7 +4660,7 @@
                 "clean",
                 "php"
             ],
-            "time": "2020-03-06T02:47:42+00:00"
+            "time": "2020-03-13T01:23:26+00:00"
         },
         {
             "name": "webonyx/graphql-php",
@@ -5351,40 +5351,37 @@
             "time": "2016-01-20T08:20:44+00:00"
         },
         {
-            "name": "mll-lab/laravel-graphql-playground",
-            "version": "v2.1.0",
+            "name": "league/flysystem-ziparchive",
+            "version": "1.0.3",
             "source": {
                 "type": "git",
-                "url": "https://github.com/mll-lab/laravel-graphql-playground.git",
-                "reference": "ed03cb7374bd05c931ac9087e2c30d8bcf06c8bb"
+                "url": "https://github.com/thephpleague/flysystem-ziparchive.git",
+                "reference": "c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/mll-lab/laravel-graphql-playground/zipball/ed03cb7374bd05c931ac9087e2c30d8bcf06c8bb",
-                "reference": "ed03cb7374bd05c931ac9087e2c30d8bcf06c8bb",
+                "url": "https://api.github.com/repos/thephpleague/flysystem-ziparchive/zipball/c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45",
+                "reference": "c6d7c7ea23a57ee802d533ab9eb9f19dd5c5fc45",
                 "shasum": ""
             },
             "require": {
-                "illuminate/console": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0",
-                "illuminate/contracts": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0",
-                "illuminate/support": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0",
-                "php": ">=7.1"
+                "ext-zip": "*",
+                "league/flysystem": "~1.0",
+                "php": ">=5.4.0"
             },
             "require-dev": {
-                "laravel/lumen-framework": "5.5.* || 5.6.* || 5.7.* || 5.8.* || ^6.0 || ^7.0",
-                "localheinz/composer-normalize": "^1.3"
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.0"
             },
             "type": "library",
             "extra": {
-                "laravel": {
-                    "providers": [
-                        "MLL\\GraphQLPlayground\\GraphQLPlaygroundServiceProvider"
-                    ]
+                "branch-alias": {
+                    "dev-master": "1.0-dev"
                 }
             },
             "autoload": {
                 "psr-4": {
-                    "MLL\\GraphQLPlayground\\": "src/"
+                    "League\\Flysystem\\ZipArchive\\": "src/"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -5393,17 +5390,12 @@
             ],
             "authors": [
                 {
-                    "name": "Benedikt Franke",
-                    "email": "benedikt@franke.tech"
+                    "name": "Frank de Jonge",
+                    "email": "info@frenky.net"
                 }
             ],
-            "description": "Easily integrate GraphQL Playground into your Laravel project",
-            "keywords": [
-                "graphql",
-                "graphql-playground",
-                "laravel"
-            ],
-            "time": "2020-03-03T15:31:22+00:00"
+            "description": "Flysystem adapter for ZipArchive's",
+            "time": "2016-12-20T08:36:16+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -5517,6 +5509,60 @@
                 "object graph"
             ],
             "time": "2020-01-17T21:11:47+00:00"
+        },
+        {
+            "name": "noud/schema-builder",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/noud/schema-builder.git",
+                "reference": "9d95f206d2b0344c0bb2911b4e876dc5f782b05a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/noud/schema-builder/zipball/9d95f206d2b0344c0bb2911b4e876dc5f782b05a",
+                "reference": "9d95f206d2b0344c0bb2911b4e876dc5f782b05a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-zip": "*",
+                "illuminate/filesystem": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.0.*|6.2.*|6.4.*|6.5.*|6.8.*|6.12.*|6.18.*|7.0.*|7.1.*",
+                "illuminate/http": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.0.*|6.2.*|6.4.*|6.5.*|6.8.*|6.12.*|6.18.*|7.0.*|7.1.*",
+                "illuminate/support": "5.1.*|5.2.*|5.3.*|5.4.*|5.5.*|5.6.*|5.7.*|5.8.*|6.0.*|6.2.*|6.4.*|6.5.*|6.8.*|6.12.*|6.18.*|7.0.*|7.1.*",
+                "league/flysystem": "^1.0",
+                "league/flysystem-ziparchive": "^1.0"
+            },
+            "require-dev": {
+                "phpmd/phpmd": "^2.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Agontuk\\Schema\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Iftekhar Rifat",
+                    "email": "rifat662@gmail.com",
+                    "homepage": "https://github.com/Agontuk",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Schema designer & migration generator for laravel & lumen",
+            "homepage": "https://github.com/noud/schema-builder",
+            "keywords": [
+                "database",
+                "migration generator",
+                "schema",
+                "schema builder",
+                "schema design"
+            ],
+            "time": "2020-03-12T22:53:59+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -7073,7 +7119,9 @@
     ],
     "aliases": [],
     "minimum-stability": "dev",
-    "stability-flags": [],
+    "stability-flags": {
+        "noud/schema-builder": 20
+    },
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {

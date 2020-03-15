@@ -1,0 +1,1000 @@
+{
+    "database": {
+        "name": "oauth"
+    },
+    "ui": {
+        "database": {
+            "showModal": false,
+            "edit": false
+        },
+        "table": {
+            "showModal": false,
+            "edit": false,
+            "editData": {
+                "id": "",
+                "name": "",
+                "softDelete": false,
+                "timeStamp": true
+            }
+        },
+        "column": {
+            "showModal": false,
+            "edit": false,
+            "editData": {
+                "id": "",
+                "name": "",
+                "type": "integer",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            "tableId": ""
+        },
+        "positions": {
+            "8zuxp5": {
+                "x": 51,
+                "y": 50
+            },
+            "z41ydq": {
+                "x": 425,
+                "y": 320
+            },
+            "atzgp": {
+                "x": 362,
+                "y": 15
+            },
+            "z381fc": {
+                "x": 644,
+                "y": 17
+            },
+            "2c8l6k": {
+                "x": 50,
+                "y": 389
+            },
+            "lzwtu": {
+                "x": 395,
+                "y": 603
+            }
+        }
+    },
+    "tables": [
+        {
+            "id": "8zuxp5",
+            "name": "user",
+            "color": "table-header-green",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "z41ydq",
+            "name": "oauth_auth_codes",
+            "color": "table-header-red",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "atzgp",
+            "name": "oauth_access_tokens",
+            "color": "table-header-red",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "z381fc",
+            "name": "oauth_refresh_tokens",
+            "color": "table-header-red",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "2c8l6k",
+            "name": "oauth_clients",
+            "color": "table-header-red",
+            "softDelete": false,
+            "timeStamp": true
+        },
+        {
+            "id": "lzwtu",
+            "name": "oauth_personal_access_clients",
+            "color": "table-header-red",
+            "softDelete": false,
+            "timeStamp": true
+        }
+    ],
+    "columns": {
+        "8zuxp5": [
+            {
+                "id": "qccpk",
+                "name": "id",
+                "type": "bigInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": true,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "4czgff",
+                "name": "name",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "4pmcln",
+                "name": "email",
+                "type": "string",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "7z5ooj",
+                "name": "email_verified_at",
+                "type": "timestamp",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "ne6ce",
+                "name": "remember_token",
+                "type": "boolean",
+                "length": "100",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "srjntr",
+                "name": "provider",
+                "type": "string",
+                "length": "255",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "t712mg",
+                "name": "provider_id",
+                "type": "string",
+                "length": "255",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "xw2u6",
+                "name": "avatar",
+                "type": "string",
+                "length": "255",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "z41ydq": [
+            {
+                "id": "yh1529",
+                "name": "id",
+                "type": "string",
+                "length": "100",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "kmhw4f",
+                "name": "user_id",
+                "type": "bigInteger",
+                "length": "20",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "qccpk",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "8zuxp5",
+                        "name": "user"
+                    }
+                }
+            },
+            {
+                "id": "n60j0n",
+                "name": "client_id",
+                "type": "bigInteger",
+                "length": "20",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "ycbk5c",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "2c8l6k",
+                        "name": "oauth_clients"
+                    }
+                }
+            },
+            {
+                "id": "oezot9",
+                "name": "scopes",
+                "type": "text",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "xdmo5j",
+                "name": "revoked",
+                "type": "tinyInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "pjjwzn",
+                "name": "expires_at",
+                "type": "dateTime",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "atzgp": [
+            {
+                "id": "nzzo1u",
+                "name": "id",
+                "type": "string",
+                "length": "100",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": true,
+                "index": true,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "6wavgj",
+                "name": "user_id",
+                "type": "bigInteger",
+                "length": "200",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "qccpk",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "8zuxp5",
+                        "name": "user"
+                    }
+                }
+            },
+            {
+                "id": "92ai09",
+                "name": "client_id",
+                "type": "bigInteger",
+                "length": "20",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "v5hw07",
+                "name": "name",
+                "type": "string",
+                "length": "255",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "p87mzw",
+                "name": "scopes",
+                "type": "text",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "pewuub",
+                "name": "revoked",
+                "type": "tinyInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "5yckdf",
+                "name": "expires_at",
+                "type": "dateTime",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "z381fc": [
+            {
+                "id": "n954ji",
+                "name": "id",
+                "type": "string",
+                "length": "100",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "o0zwz",
+                "name": "access_token_id",
+                "type": "string",
+                "length": "100",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "nzzo1u",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "atzgp",
+                        "name": "oauth_access_tokens"
+                    }
+                }
+            },
+            {
+                "id": "rkhm6",
+                "name": "revoked",
+                "type": "tinyInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "kg0cs",
+                "name": "expires_at",
+                "type": "dateTime",
+                "length": "",
+                "defValue": "NULL",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "2c8l6k": [
+            {
+                "id": "ycbk5c",
+                "name": "id",
+                "type": "bigInteger",
+                "length": "20",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "bb29xd",
+                "name": "user_id",
+                "type": "bigInteger",
+                "length": "20",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "qccpk",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "8zuxp5",
+                        "name": "user"
+                    }
+                }
+            },
+            {
+                "id": "ozau7k",
+                "name": "name",
+                "type": "string",
+                "length": "255",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "pzvrt",
+                "name": "secret",
+                "type": "string",
+                "length": "100",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": true,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "62qev",
+                "name": "redirect",
+                "type": "text",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "iq99d",
+                "name": "personal_access_client",
+                "type": "tinyInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "2498vv",
+                "name": "password_client",
+                "type": "tinyInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "7q6153",
+                "name": "revoked",
+                "type": "tinyInteger",
+                "length": "",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": false,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            }
+        ],
+        "lzwtu": [
+            {
+                "id": "8rn1os",
+                "name": "id",
+                "type": "bigInteger",
+                "length": "20",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "",
+                        "name": ""
+                    },
+                    "on": {
+                        "id": "",
+                        "name": ""
+                    }
+                }
+            },
+            {
+                "id": "7ua01q",
+                "name": "client_id",
+                "type": "bigInteger",
+                "length": "20",
+                "defValue": "",
+                "comment": "",
+                "autoInc": false,
+                "nullable": false,
+                "unique": false,
+                "index": false,
+                "unsigned": true,
+                "foreignKey": {
+                    "references": {
+                        "id": "ycbk5c",
+                        "name": "id"
+                    },
+                    "on": {
+                        "id": "2c8l6k",
+                        "name": "oauth_clients"
+                    }
+                }
+            }
+        ]
+    },
+    "relations": [
+        {
+            "source": {
+                "columnId": "6wavgj",
+                "tableId": "atzgp"
+            },
+            "target": {
+                "columnId": "qccpk",
+                "tableId": "8zuxp5"
+            }
+        },
+        {
+            "source": {
+                "columnId": "o0zwz",
+                "tableId": "z381fc"
+            },
+            "target": {
+                "columnId": "nzzo1u",
+                "tableId": "atzgp"
+            }
+        },
+        {
+            "source": {
+                "columnId": "bb29xd",
+                "tableId": "2c8l6k"
+            },
+            "target": {
+                "columnId": "qccpk",
+                "tableId": "8zuxp5"
+            }
+        },
+        {
+            "source": {
+                "columnId": "kmhw4f",
+                "tableId": "z41ydq"
+            },
+            "target": {
+                "columnId": "qccpk",
+                "tableId": "8zuxp5"
+            }
+        },
+        {
+            "source": {
+                "columnId": "n60j0n",
+                "tableId": "z41ydq"
+            },
+            "target": {
+                "columnId": "ycbk5c",
+                "tableId": "2c8l6k"
+            }
+        },
+        {
+            "source": {
+                "columnId": "7ua01q",
+                "tableId": "lzwtu"
+            },
+            "target": {
+                "columnId": "ycbk5c",
+                "tableId": "2c8l6k"
+            }
+        }
+    ]
+}
