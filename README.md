@@ -9,7 +9,7 @@
 
 ## Layered Schemas
 
-### [OAuth 2.0](https://en.wikipedia.org/wiki/OAuth#OAuth_2.0)
+### [OAuth2](https://en.wikipedia.org/wiki/OAuth#OAuth_2.0)
 
 - Users
 
