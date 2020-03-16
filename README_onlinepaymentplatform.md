@@ -13,8 +13,8 @@
 
 ### PHP packages
 
-- [online-betaal-platform PHP package](https://github.com/nimbles-nl/online-betaal-platform)
-- [Onlinebetaalplatform PHP wrapper](https://github.com/Vwebdesign/Onlinebetaalplatform)
+- [online-betaal-platform](https://github.com/nimbles-nl/online-betaal-platform) PHP package
+- [Onlinebetaalplatform](https://github.com/Vwebdesign/Onlinebetaalplatform) PHP wrapper
 
 ### [universally unique identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
