@@ -335,7 +335,7 @@
 						"body": {
 							"mode": "graphql",
 							"graphql": {
-								"query": "mutation {\n  register(input: {\n    name: \"noud\",\n    email: \"myemail@email.com\",\n    password: \"Test1234\"\n    password_confirmation: \"Test1234\"\n  }) {\n    tokens {\n        access_token\n        refresh_token\n        expires_in\n        token_type\n    }\n    status\n  }\n}",
+								"query": "mutation {\n  register(input: {\n    name: \"noud\",\n    email: \"noud5@home.nl\",\n    password: \"test1234\"\n    password_confirmation: \"test1234\"\n  }) {\n    tokens {\n        access_token\n        refresh_token\n        expires_in\n        token_type\n    }\n    status\n  }\n}",
 								"variables": ""
 							}
 						},
