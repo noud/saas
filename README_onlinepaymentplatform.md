@@ -18,7 +18,7 @@
 
 ### [universally unique identifier (UUID)](https://en.wikipedia.org/wiki/Universally_unique_identifier)
 
-- [Easily use UUIDs in Laravel](https://dev.to/wilburpowery/easily-use-uuids-in-laravel-45be) blogpost
+<!-- - [Easily use UUIDs in Laravel](https://dev.to/wilburpowery/easily-use-uuids-in-laravel-45be) blogpost -->
 - [Laravel UUID](https://github.com/webpatser/laravel-uuid) package
 
 ## Copyright & license
