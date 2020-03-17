@@ -30,9 +30,9 @@
 
 - DataBaseTables
 
-![ERD Entity-Relationship Diagram](./docs/saas/erd.png?raw=true "ERD Entity-Relationship Diagram")
+![ERD Entity-Relationship Diagram](./docs/erd/erd.png?raw=true "ERD Entity-Relationship Diagram")
 
-## [Tooling](https://github.com/noud/saas/blob/saas/README_tooling.md)
+## [Tooling](https://github.com/noud/saas/blob/master/README_tooling.md)
 
 ## Copyright & license
 
