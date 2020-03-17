@@ -12,6 +12,7 @@ type Query @middleware(checks: ["auth:api"]) {
 }
 
 type Mutation {
+    # authentication
     register(input: RegisterInput @spread): RegisterResponse! @field(resolver: "Joselfonseca\\LighthouseGraphQLPassport\\GraphQL\\Mutations\\Register@resolve")
     login(input: LoginInput @spread): AuthPayload! @field(resolver: "Joselfonseca\\LighthouseGraphQLPassport\\GraphQL\\Mutations\\Login@resolve")
     logout: LogoutResponse! @field(resolver: "Joselfonseca\\LighthouseGraphQLPassport\\GraphQL\\Mutations\\Logout@resolve")
@@ -32,3 +33,5 @@ type User {
     created_at: DateTime!
     updated_at: DateTime!
 }
+
+#import entities/user.graphql

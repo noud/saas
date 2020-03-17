@@ -1,0 +1,96 @@
+extend type Query {
+
+
+    # ra-data-opencrud (try) (paginate error)
+    # if i now add the User fields to
+    # /home/noud/workspace/lighthouse-tutorial/vendor/nuwave/lighthouse/src/Pagination/PaginationManipulator.php line 132
+    # and a console message
+    # issing translation for key: "Unknown resource User. Make sure it has been declared on your server side schema. Known resources are User" 
+    # i get an empty wrong result
+    # users: [User!]! @paginate(model: "App\\Models\\User")
+    # usersConnection(aggregate: Int): [User!]! @field(resolver: "App\\GraphQL\\Query@usersConnection")
+#    opencrud_users: [User!]! @paginate(builder: "App\\Models\\Laravel\\User@visibleUsers")
+
+    # ra-data-opencrud (so far) (paginate error)
+    opencrud_users: [User!]! @all
+    usersConnection: [User!]! @all
+    opencrud_user(id: UserEdit @eq): User @first
+ 
+    # ra-data-graphql-simple (so far) (paginate error)
+    # User(id: UserInput! @eq): User @find
+    User(id: Int): User @first
+    allUsers: [User!]! @all
+    _allUsersMeta: ListMetadata @all  # fake
+
+    # ra-data-graphql-simple (example)
+    # allUsers(page: Int, perPage: Int): [User]
+    # allUsersMeta(page: Int, perPage: Int): ListMetadata
+
+    # react apollo
+    apollo_paginated_users: [User!]! @paginate(defaultCount: 10)
+    # apollo_paginated_users(first: Int!, page: Int): [User!]! @paginate(model: "User", scopes: ["name"])  # scopes: ["filterAndOrder"]
+    # apollo_paginated_users(first: Int!, page: Int, name: String): [User!]! @paginate(model: "User", scopes: ["name"])  # scopes: ["filterAndOrder"]
+    apollo_single_user(id: UserInput @eq): User @find
+    apollo_users: [User!]! @all(model: "App\\Models\\Laravel\\User")
+}
+
+# ra-data-graphql-simple (faking)
+type ListMetadata {
+    count: Int
+}
+
+# ra-data-opencrud (try fake)
+type Aggregate {
+    id: ID
+    count: Int
+}
+
+# type User {
+#     id: ID!
+#     name: String!
+#     email: String!
+# }
+
+# ar-data-graphql
+input UserEdit {
+    id: ID
+    name: String
+}
+
+# ar-data-graphql
+input UserInput {
+    id: ID!
+}
+
+# input CreateUserInput {
+#    name: String!
+# }
+
+# input  UpdateUserInput {
+#    name: String!
+# }
+
+input CreateUserInput {
+    name: String! @rules(apply: ["required", "min:4"])
+    email: String @rules(apply: ["email"])
+}
+
+input UpdateUserInput {
+    id: ID!
+    name: String @rules(apply: ["required", "min:4"])
+    email: String @rules(apply: ["email"])
+}
+
+# type Subscription {
+#   userUpdated(id: ID): User
+# }
+
+extend type Mutation {
+#   createUser(name: String!, content: String): User! @create
+    createUser(input: CreateUserInput! @spread): User @create
+    updateUser(input: UpdateUserInput! @spread): User @update
+    # updateUser(input: UpdateUserInput! @spread): User @update @broadcast(subscription: "userUpdated")
+  deleteUser(id: ID!): User @delete
+}
+
+# import user.subscription.graphql
