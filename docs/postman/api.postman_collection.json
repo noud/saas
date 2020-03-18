@@ -506,7 +506,7 @@
 				"body": {
 					"mode": "graphql",
 					"graphql": {
-						"query": "{\n  apollo_paginated_users(first: 20){\n    data {\n      id\n      name\n      email\n    }\n  }\n}",
+						"query": "{\n  apollo_paginated_users(first: 20){\n    data {\n      id\n      name\n      email\n    }\n    paginatorInfo {\n      perPage\n      total\n    }\n   }\n}",
 						"variables": ""
 					}
 				},
