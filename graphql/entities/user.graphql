@@ -27,12 +27,18 @@ extend type Query {
     # allUsersMeta(page: Int, perPage: Int): ListMetadata
 
     # react apollo
-    apollo_paginated_users: [User!]! @paginate(defaultCount: 10)
     # apollo_paginated_users(first: Int!, page: Int): [User!]! @paginate(model: "User", scopes: ["name"])  # scopes: ["filterAndOrder"]
     # apollo_paginated_users(first: Int!, page: Int, name: String): [User!]! @paginate(model: "User", scopes: ["name"])  # scopes: ["filterAndOrder"]
-    apollo_single_user(id: UserInput @eq): User @find
+    # apollo_single_user(id: UserInput @eq): User @find
     apollo_users: [User!]! @all(model: "App\\Models\\Laravel\\User")
+
+    apollo_paginated_users: [User!]! @paginate(defaultCount: 10)
+    apollo_single_user(id: ID @eq): User @find(model: "App\\Models\\Laravel\\User")
 }
+
+# type UserPayload {
+#     user: User
+# }
 
 # ra-data-graphql-simple (faking)
 type ListMetadata {
