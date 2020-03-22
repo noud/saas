@@ -32,7 +32,8 @@ extend type Query {
     # apollo_single_user(id: UserInput @eq): User @find
     apollo_users: [User!]! @all(model: "App\\Models\\Laravel\\User")
 
-    apollo_paginated_users: [User!]! @paginate(defaultCount: 10)
+    # apollo_paginated_users: [User!]! @paginate(defaultCount: 10)
+    apollo_paginated_users: [User!]! @paginate(model: "App\\Models\\Laravel\\User")
     apollo_single_user(id: ID @eq): User @find(model: "App\\Models\\Laravel\\User")
 }
 
