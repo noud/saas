@@ -1,6 +1,6 @@
 # customized
-
-app/Models/Laravel
+app/Models/Laravel/*
+!app/Models/Laravel/User.php
 app/Models/SaaS
 !app/Models/SaaS/Person.php
 
