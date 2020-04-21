@@ -22,3 +22,4 @@ Route::group(['as' => 'email.'], function () {
 });
 
 Route::post('password/reset', 'Joselfonseca\LighthouseGraphQLPassport\GraphQL\Mutations\ForgotPassword@resolve')->name('password.reset');
+Route::get('emails/harvest/{maildirname}', 'EmailController@harvest')->name('emails');
