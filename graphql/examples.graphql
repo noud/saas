@@ -1,0 +1,10 @@
+extend type Query {
+    # hello: String!
+    hello: Hello!
+    # greet(name: String!): String
+    greet(name: String = "you"): String
+}
+
+type Hello {
+    world: String!
+}

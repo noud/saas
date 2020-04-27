@@ -4,7 +4,9 @@ scalar DateTime @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date
 "A date string with format `Y-m-d`, e.g. `2011-05-23`."
 scalar Date @scalar(class: "Nuwave\\Lighthouse\\Schema\\Types\\Scalars\\Date")
 
-type Query @middleware(checks: ["auth:api"]) {
+type Query {
+    # @todo disabled for dev
+    # @middleware(checks: ["auth:api"]) {
     # users: [User!]! @paginate(defaultCount: 10)
     users: [User!]! @paginate(defaultCount: 10)
     # users: [User!]! @paginate(type: "paginator" model: "App\\User")
@@ -34,4 +36,5 @@ type User {
     updated_at: DateTime!
 }
 
+#import examples.graphql
 #import entities/user.graphql
