@@ -58,10 +58,24 @@ class AdvancedUsageController extends Controller
         ];
         $notes = implode("<br>", $notes);
 
+        $currencySymbol = '€';
+        // $currencySymbol = config('invoice.currency.symbol');
+        $currencyValue = 123.45;
+        $serialNumberSequence = 1;
+        $serialNumberSeries = 'AA';
+        // $serialNumberSequence = config('serial_number.sequence');
+        // $serialNumberSeries = config('serial_number.series');
+
+// dump($currencySymbol);
+// dump($currencyValue);
+// dump($serialNumberSequence);
+// dump($serialNumberSeries);
+
+        //    return "done"; 
         $invoice = Invoice::make('receipt')
             ->series('BIG')
             ->sequence(667)
-            ->serialNumberFormat('{SEQUENCE}/{SERIES}')
+            ->serialNumberFormat($currencySymbol . '/' . $currencyValue)
             ->seller($client)
             ->buyer($customer)
             ->date(now()->subWeeks(3))
@@ -69,16 +83,16 @@ class AdvancedUsageController extends Controller
             ->payUntilDays(14)
             ->currencySymbol('$')
             ->currencyCode('USD')
-            ->currencyFormat('{SYMBOL}{VALUE}')
+            ->currencyFormat($serialNumberSequence . $serialNumberSeries)
             ->currencyThousandsSeparator('.')
             ->currencyDecimalPoint(',')
             ->filename($client->name . ' ' . $customer->name)
             ->addItems($items)
             ->notes($notes)
-            ->logo(public_path('vendor/invoices/sample-logo.png'))
+            // ->logo(public_path('vendor/invoices/sample-logo.png'))
             // You can additionally save generated invoice to configured disk
             ->save('public');
-            
+        //    return "done2"; 
         $link = $invoice->url();
         // Then send email to party with link
 
