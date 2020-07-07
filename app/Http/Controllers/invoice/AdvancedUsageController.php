@@ -1,5 +1,8 @@
 <?php
 
+namespace App\Http\Controllers\invoice;
+
+use App\Http\Controllers\Controller;
 use LaravelDaily\Invoices\Invoice;
 use LaravelDaily\Invoices\Classes\Party;
 use LaravelDaily\Invoices\Classes\InvoiceItem;

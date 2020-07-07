@@ -1,5 +1,9 @@
 <?php
 
+namespace App\Http\Controllers\invoice;
+
+use App\Http\Controllers\Controller;
+use App\Http\Controllers\invoice;
 use Invoice;
 
 class AlternativesController extends Controller
