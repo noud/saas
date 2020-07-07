@@ -3,8 +3,9 @@
 namespace App\Http\Controllers\invoice;
 
 use App;
-
+use Config;
 use App\Http\Controllers\Controller;
+
 use LaravelDaily\Invoices\Invoice;
 use LaravelDaily\Invoices\Classes\Party;
 use LaravelDaily\Invoices\Classes\InvoiceItem;
@@ -62,49 +63,73 @@ class AdvancedUsageController extends Controller
         ];
         $notes = implode("<br>", $notes);
 
+        $currencySymbol = Config::get('invoice.currency.symbol');
+        $serialNumberSequence = config('serial_number.sequence');
+        $serialNumberSeries = config('serial_number.series');
+
+// dump($currencySymbol);
+// dump($serialNumberSequence);
+// dump($serialNumberSeries);
+
         $currencySymbol = '€';
-        // $currencySymbol = config('invoice.currency.symbol');
         $currencyValue = 123.45;
         $serialNumberSequence = 1;
         $serialNumberSeries = 'AA';
-        // $serialNumberSequence = config('serial_number.sequence');
-        // $serialNumberSeries = config('serial_number.series');
+
+        $name = 'Factuur';
+        $dateFormat = 'd-m-Y';
+        $currencySymbol = '€';
+        $currencyCode = 'EUR';
+        $currencyThousandsSeparator = ',';
+        $currencyDecimalPoint = '.';
+        $taxRate = 21;
+        $locale = App::getLocale();
+
+        if (App::isLocale('en')) {
+            $name = 'Invoice';
+            $dateFormat = 'm/d/Y';
+            $currencySymbol = '$';
+            $currencyCode = 'USD';
+            $currencyThousandsSeparator = '.';
+            $currencyDecimalPoint = ',';
+            unset($taxRate);
+        }
 
 // dump($currencySymbol);
 // dump($currencyValue);
 // dump($serialNumberSequence);
 // dump($serialNumberSeries);
 
-        $invoiceName = 'Factuur';
-        $locale = App::getLocale();
+//    return "done";
 
-        if (App::isLocale('en')) {
-            $invoiceName = 'Invoice';
-        }
-
-        //    return "done"; 
         $invoice = Invoice::make('receipt')
-            ->name($invoiceName)
+            ->name($name)
             ->series('BIG')
             ->sequence(667)
             ->serialNumberFormat($serialNumberSequence . '/' . $serialNumberSeries)
             ->seller($client)
             ->buyer($customer)
             ->date(now()->subWeeks(3))
-            ->dateFormat('m/d/Y')
+            ->dateFormat($dateFormat)
             ->payUntilDays(14)
-            ->currencySymbol('$')
-            ->currencyCode('USD')
+            ->currencySymbol($currencySymbol)
+            ->currencyCode($currencyCode)
             ->currencyFormat($currencySymbol . $currencyValue)
-            ->currencyThousandsSeparator('.')
-            ->currencyDecimalPoint(',')
+            // ->currencyFormat('{SYMBOL}{VALUE}')
+            ->currencyThousandsSeparator($currencyThousandsSeparator)
+            ->currencyDecimalPoint($currencyDecimalPoint)
             ->filename($client->name . ' ' . $customer->name)
             ->addItems($items)
             ->notes($notes)
-            ->logo(public_path('vendor/invoices/sample-logo.png'))
-            // You can additionally save generated invoice to configured disk
-            ->save('public');
-        //    return "done2"; 
+            ->logo(public_path('vendor/invoices/sample-logo.png'));
+
+       if (isset($taxRate)) {
+            $invoice->taxRate($taxRate);
+        }
+
+        // You can additionally save generated invoice to configured disk
+        $invoice->save('public');
+
         $link = $invoice->url();
         // Then send email to party with link
 
