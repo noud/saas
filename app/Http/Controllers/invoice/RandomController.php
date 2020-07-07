@@ -7,7 +7,6 @@ use LaravelDaily\Invoices\Invoice;
 use LaravelDaily\Invoices\Classes\Buyer;
 use LaravelDaily\Invoices\Classes\InvoiceItem;
 
-// <...>
 class RandomController extends Controller
 {
     function random() {

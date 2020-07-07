@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\invoice;
 
+use App;
+
 use App\Http\Controllers\Controller;
 use LaravelDaily\Invoices\Invoice;
 use LaravelDaily\Invoices\Classes\Party;
@@ -10,7 +12,9 @@ use LaravelDaily\Invoices\Classes\InvoiceItem;
 // <...>
 class AdvancedUsageController extends Controller
 {
-    function advanced() {
+    function advanced($locale) {
+        App::setLocale($locale);
+
         $client = new Party([
             'name'          => 'Roosevelt Lloyd',
             'phone'         => '(520) 318-9486',
@@ -71,8 +75,16 @@ class AdvancedUsageController extends Controller
 // dump($serialNumberSequence);
 // dump($serialNumberSeries);
 
+        $invoiceName = 'Factuur';
+        $locale = App::getLocale();
+
+        if (App::isLocale('en')) {
+            $invoiceName = 'Invoice';
+        }
+
         //    return "done"; 
         $invoice = Invoice::make('receipt')
+            ->name($invoiceName)
             ->series('BIG')
             ->sequence(667)
             ->serialNumberFormat($serialNumberSequence . '/' . $serialNumberSeries)

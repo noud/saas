@@ -4,7 +4,6 @@ namespace App\Http\Controllers\invoice;
 
 use App\Http\Controllers\Controller;
 use LaravelDaily\Invoices\Invoice;
-// use Invoice;
 
 class AlternativesController extends Controller
 {

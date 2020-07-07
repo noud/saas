@@ -26,5 +26,15 @@ Route::get('emails/harvest/{maildirname}', 'EmailController@harvest')->name('ema
 
 // invoice
 Route::get('invoice/random', 'invoice\RandomController@random')->name('invoice-random');
-Route::get('invoice/advanced', 'invoice\AdvancedUsageController@advanced')->name('invoice-advanced');
+Route::get('invoice/advanced/{locale}', 'invoice\AdvancedUsageController@advanced')->name('invoice-advanced');
 Route::get('invoice/alternatives/{gig}', 'invoice\AlternativesController@alternatives')->name('invoice-alternatives');
+
+// Route::get('invoice/advanced/{locale}', function ($locale) {
+//     if (! in_array($locale, ['en', 'nl'])) {
+//         abort(400);
+//     }
+
+//     App::setLocale($locale);
+
+//     Route::get('invoice/advanced', 'invoice\AdvancedUsageController@advanced')->name('invoice-advanced');
+// });
