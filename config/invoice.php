@@ -44,12 +44,12 @@ return [
         /**
          * Example: 1.99
          */
-        'decimal_point'       => '.',
+        'decimal_point'       => ',',
         /**
          * By default empty.
          * Example: 1,999.00
          */
-        'thousands_separator' => '',
+        'thousands_separator' => '.',
         /**
          * Supported tags {VALUE}, {SYMBOL}, {CODE}
          * Example: 1.99 €

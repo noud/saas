@@ -63,23 +63,22 @@ class AdvancedUsageController extends Controller
         ];
         $notes = implode("<br>", $notes);
 
+        $serialNumberSequence = Config::get('invoice.serial_number.sequence');
+        $serialNumberSeries = Config::get('invoice.serial_number.series');
+        // @todo format
+        $serialNumberFormat = Config::get('invoice.serial_number.format');
+
         $currencySymbol = Config::get('invoice.currency.symbol');
-        $serialNumberSequence = config('serial_number.sequence');
-        $serialNumberSeries = config('serial_number.series');
+        $currencyCode = strtolower(Config::get('invoice.currency.code'));
+        $currencyDecimalPoint = Config::get('invoice.currency.decimal_point');
+        $currencyThousandsSeparator = Config::get('invoice.currency.thousands_separator');
+        // @todo format
+        $currencyFormat = Config::get('invoice.currency.format');
 
-// dump($currencySymbol);
-// dump($serialNumberSequence);
-// dump($serialNumberSeries);
-
-        $currencySymbol = '€';
         $currencyValue = 123.45;
-        $serialNumberSequence = 1;
-        $serialNumberSeries = 'AA';
 
         $name = 'Factuur';
         $dateFormat = 'd-m-Y';
-        $currencySymbol = '€';
-        $currencyCode = 'EUR';
         $currencyThousandsSeparator = ',';
         $currencyDecimalPoint = '.';
         $taxRate = 21;
@@ -94,13 +93,6 @@ class AdvancedUsageController extends Controller
             $currencyDecimalPoint = ',';
             unset($taxRate);
         }
-
-// dump($currencySymbol);
-// dump($currencyValue);
-// dump($serialNumberSequence);
-// dump($serialNumberSeries);
-
-//    return "done";
 
         $invoice = Invoice::make('receipt')
             ->name($name)
