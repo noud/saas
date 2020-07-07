@@ -125,7 +125,7 @@ class InvoiceController extends Controller
             ->notes($notes)
             ->logo(public_path('vendor/invoices/sample-logo.png'));
 
-       if (isset($taxRate)) {
+       if (isset($this->taxRate)) {
             $invoice->taxRate($this->taxRate);
         }
 
