@@ -16,14 +16,26 @@ class AdvancedUsageController extends Controller
     function advanced($locale) {
         App::setLocale($locale);
 
-        $client = new Party([
-            'name'          => 'Roosevelt Lloyd',
-            'phone'         => '(520) 318-9486',
-            'custom_fields' => [
-                'note'        => 'IDDQD',
-                'business id' => '365#GG',
-            ],
-        ]);
+        $dateFormat = Config::get('invoice.date.format');
+
+        $currencySymbol = Config::get('invoice.currency.symbol');
+        $currencyCode = strtolower(Config::get('invoice.currency.code'));
+        $currencyDecimalPoint = Config::get('invoice.currency.decimal_point');
+        $currencyThousandsSeparator = Config::get('invoice.currency.thousands_separator');
+        // @todo format
+        $currencyFormat = Config::get('invoice.currency.format');
+        // @todo what
+        $currencyValue = 123.45;
+
+        // $client = new Party([
+        //     'name'          => 'Roosevelt Lloyd',
+        //     'phone'         => '(520) 318-9486',
+        //     'custom_fields' => [
+        //         'note'        => 'IDDQD',
+        //         'business id' => '365#GG',
+        //     ],
+        // ]);
+        $client = new Party(Config::get('invoice.seller.attributes'));
 
         $customer = new Party([
             'name'          => 'Ashley Medina',
@@ -68,22 +80,10 @@ class AdvancedUsageController extends Controller
         // @todo format
         $serialNumberFormat = Config::get('invoice.serial_number.format');
 
-        $currencySymbol = Config::get('invoice.currency.symbol');
-        $currencyCode = strtolower(Config::get('invoice.currency.code'));
-        $currencyDecimalPoint = Config::get('invoice.currency.decimal_point');
-        $currencyThousandsSeparator = Config::get('invoice.currency.thousands_separator');
-        // @todo format
-        $currencyFormat = Config::get('invoice.currency.format');
-
-        $currencyValue = 123.45;
-
         $name = 'Factuur';
-        $dateFormat = 'd-m-Y';
-        $currencyThousandsSeparator = ',';
-        $currencyDecimalPoint = '.';
         $taxRate = 21;
-        $locale = App::getLocale();
 
+        $locale = App::getLocale();
         if (App::isLocale('en')) {
             $name = 'Invoice';
             $dateFormat = 'm/d/Y';

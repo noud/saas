@@ -5,7 +5,9 @@ return [
         /**
          * Carbon date format
          */
-        'format'         => 'Y-m-d',
+        // 'format'         => 'Y-m-d',
+        // 'format'         => 'm/d/Y', // @todo U.S.A?
+        'format'         => 'd-m-Y',    // @todo Dutch
         /**
          * Due date for payment since invoice's date.
          */
