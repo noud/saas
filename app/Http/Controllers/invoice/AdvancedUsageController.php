@@ -75,7 +75,7 @@ class AdvancedUsageController extends Controller
         $invoice = Invoice::make('receipt')
             ->series('BIG')
             ->sequence(667)
-            ->serialNumberFormat($currencySymbol . '/' . $currencyValue)
+            ->serialNumberFormat($serialNumberSequence . '/' . $serialNumberSeries)
             ->seller($client)
             ->buyer($customer)
             ->date(now()->subWeeks(3))
@@ -83,13 +83,13 @@ class AdvancedUsageController extends Controller
             ->payUntilDays(14)
             ->currencySymbol('$')
             ->currencyCode('USD')
-            ->currencyFormat($serialNumberSequence . $serialNumberSeries)
+            ->currencyFormat($currencySymbol . $currencyValue)
             ->currencyThousandsSeparator('.')
             ->currencyDecimalPoint(',')
             ->filename($client->name . ' ' . $customer->name)
             ->addItems($items)
             ->notes($notes)
-            // ->logo(public_path('vendor/invoices/sample-logo.png'))
+            ->logo(public_path('vendor/invoices/sample-logo.png'))
             // You can additionally save generated invoice to configured disk
             ->save('public');
         //    return "done2"; 

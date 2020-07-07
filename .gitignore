@@ -1,3 +1,7 @@
+# vendor public
+
+/public/vendor
+
 # customized
 
 app/Models/Laravel
