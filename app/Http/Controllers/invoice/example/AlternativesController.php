@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\invoice;
+namespace App\Http\Controllers\invoice\example;
 
 use App\Http\Controllers\Controller;
 use LaravelDaily\Invoices\Invoice;

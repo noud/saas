@@ -11,7 +11,7 @@ return [
         /**
          * Due date for payment since invoice's date.
          */
-        'pay_until_days' => 7,
+        'pay_until_days' => 30,
     ],
 
     'serial_number' => [
@@ -37,7 +37,7 @@ return [
          *
          * Example: Amount in words: Eight hundred fifty thousand sixty-eight EUR and fifteen ct.
          */
-        'fraction'            => 'ct.',
+        'fraction'            => 'cent',
         'symbol'              => '€',
         /**
          * Example: 19.00
@@ -56,7 +56,7 @@ return [
          * Supported tags {VALUE}, {SYMBOL}, {CODE}
          * Example: 1.99 €
          */
-        'format'              => '{VALUE} {SYMBOL}',
+        'format'              => '{SYMBOL} {VALUE}',
     ],
 
     'paper' => [
@@ -80,11 +80,10 @@ return [
          * Default attributes for Seller::class
          */
         'attributes' => [
-            'name'          => 'Towne, Smith and Ebert',
-            'address'       => '89982 Pfeffer Falls Damianstad, CO 66972-8160',
-            'code'          => '41-1985581',
-            'vat'           => '123456789',
-            'phone'         => '760-355-3930',
+            'name'          => 'Secure Code',
+            'address'       => 'Voldijkje 13, 5053 AG  GOIRLE',
+            'vat'           => 'NL003331926895',
+            'phone'         => '+31(0)6 1987 3003',
             'custom_fields' => [
                 /**
                  * Custom attributes for Seller::class
@@ -92,7 +91,10 @@ return [
                  * Used to display additional info on Seller section in invoice
                  * attribute => value
                  */
-                'SWIFT' => 'BANK101',
+                'kvk'   => '783999505',
+                'bank_number'  => 'NL64RABO0116846267',
+                'bank_name'  => 'Rabobank',
+                'swift' => 'RABONL2U',
             ],
         ],
     ],

@@ -25,9 +25,9 @@ Route::post('password/reset', 'Joselfonseca\LighthouseGraphQLPassport\GraphQL\Mu
 Route::get('emails/harvest/{maildirname}', 'EmailController@harvest')->name('emails');
 
 // invoice
-Route::get('invoice/random', 'invoice\RandomController@random')->name('invoice-random');
-Route::get('invoice/advanced/{locale}', 'invoice\AdvancedUsageController@advanced')->name('invoice-advanced');
-Route::get('invoice/alternatives/{gig}', 'invoice\AlternativesController@alternatives')->name('invoice-alternatives');
+Route::get('invoice/random', 'invoice\example\RandomController@random')->name('invoice-random');
+Route::get('invoice/advanced/{locale}', 'invoice\example\AdvancedUsageController@advanced')->name('invoice-advanced');
+Route::get('invoice/alternatives/{gig}', 'invoice\example\AlternativesController@alternatives')->name('invoice-alternatives');
 Route::get('invoice/view/{locale}', 'invoice\InvoiceController@invoice')->name('invoice-alternatives');
 
 // Route::get('invoice/advanced/{locale}', function ($locale) {

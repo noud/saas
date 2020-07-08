@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\invoice;
+namespace App\Http\Controllers\invoice\example;
 
 use App;
 use Config;
