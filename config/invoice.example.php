@@ -5,11 +5,11 @@ return [
         /**
          * Carbon date format
          */
-        'format'         => 'd-m-Y',    // @todo Dutch
+        'format'         => 'Y-m-d',
         /**
          * Due date for payment since invoice's date.
          */
-        'pay_until_days' => 30,
+        'pay_until_days' => 7,
     ],
 
     'serial_number' => [
@@ -35,7 +35,7 @@ return [
          *
          * Example: Amount in words: Eight hundred fifty thousand sixty-eight EUR and fifteen ct.
          */
-        'fraction'            => 'cent',
+        'fraction'            => 'ct.',
         'symbol'              => '€',
         /**
          * Example: 19.00
@@ -44,17 +44,17 @@ return [
         /**
          * Example: 1.99
          */
-        'decimal_point'       => ',',
+        'decimal_point'       => '.',
         /**
          * By default empty.
          * Example: 1,999.00
          */
-        'thousands_separator' => '.',
+        'thousands_separator' => '',
         /**
          * Supported tags {VALUE}, {SYMBOL}, {CODE}
          * Example: 1.99 €
          */
-        'format'              => '{SYMBOL} {VALUE}',
+        'format'              => '{VALUE} {SYMBOL}',
     ],
 
     'paper' => [
@@ -78,10 +78,11 @@ return [
          * Default attributes for Seller::class
          */
         'attributes' => [
-            'name'          => 'Secure Code',
-            'address'       => 'Voldijkje 13, 5053 AG  GOIRLE, NL',
-            'vat'           => 'NL003331926895',
-            'phone'         => '+31 (0)6 1987 3003',
+            'name'          => 'Towne, Smith and Ebert',
+            'address'       => '89982 Pfeffer Falls Damianstad, CO 66972-8160',
+            'code'          => '41-1985581',
+            'vat'           => '123456789',
+            'phone'         => '760-355-3930',
             'custom_fields' => [
                 /**
                  * Custom attributes for Seller::class
@@ -89,10 +90,7 @@ return [
                  * Used to display additional info on Seller section in invoice
                  * attribute => value
                  */
-                'kvk'   => '783999505',
-                'bank_number'  => 'NL64RABO0116846267',
-                'bank_name'  => 'Rabobank',
-                'swift' => 'RABONL2U',
+                'SWIFT' => 'BANK101',
             ],
         ],
     ],

@@ -5,7 +5,7 @@ return [
         /**
          * Carbon date format
          */
-        'format'         => 'd-m-Y',    // @todo Dutch
+        'format'         => 'm/d/Y', // @todo U.S.A?
         /**
          * Due date for payment since invoice's date.
          */
@@ -28,15 +28,15 @@ return [
     ],
 
     'currency' => [
-        'code'                => 'eur',
+        'code'                => 'USD',
         /**
          * Usually cents
          * Used when spelling out the amount and if your currency has decimals.
          *
          * Example: Amount in words: Eight hundred fifty thousand sixty-eight EUR and fifteen ct.
          */
-        'fraction'            => 'cent',
-        'symbol'              => '€',
+        'fraction'            => 'ct.',
+        'symbol'              => '$',
         /**
          * Example: 19.00
          */
@@ -44,12 +44,12 @@ return [
         /**
          * Example: 1.99
          */
-        'decimal_point'       => ',',
+        'decimal_point'       => '.',
         /**
          * By default empty.
          * Example: 1,999.00
          */
-        'thousands_separator' => '.',
+        'thousands_separator' => ',',
         /**
          * Supported tags {VALUE}, {SYMBOL}, {CODE}
          * Example: 1.99 €
@@ -79,21 +79,7 @@ return [
          */
         'attributes' => [
             'name'          => 'Secure Code',
-            'address'       => 'Voldijkje 13, 5053 AG  GOIRLE, NL',
-            'vat'           => 'NL003331926895',
-            'phone'         => '+31 (0)6 1987 3003',
-            'custom_fields' => [
-                /**
-                 * Custom attributes for Seller::class
-                 *
-                 * Used to display additional info on Seller section in invoice
-                 * attribute => value
-                 */
-                'kvk'   => '783999505',
-                'bank_number'  => 'NL64RABO0116846267',
-                'bank_name'  => 'Rabobank',
-                'swift' => 'RABONL2U',
-            ],
+            'address'       => '11 Pin oak rd.. Texax, USA',
         ],
     ],
 ];
