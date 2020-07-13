@@ -5,6 +5,7 @@ return [
         /**
          * Carbon date format
          */
+        // 'format'         => 'Y-m-d',
         'format'         => 'd-m-Y',    // @todo Dutch
         /**
          * Due date for payment since invoice's date.
@@ -92,7 +93,7 @@ return [
                 'kvk'   => '783999505',
                 'bank_number'  => 'NL64RABO0116846267',
                 'bank_name'  => 'Rabobank',
-                'swift' => 'RABONL2U',
+                'SWIFT' => 'RABONL2U',
             ],
         ],
     ],

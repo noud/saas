@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\invoice;
+namespace App\Http\Controllers\Invoices;
 
 use App;
 use Config;
@@ -27,17 +27,17 @@ class InvoiceController extends Controller
     protected $datePayUntilDays;
 
     function __construct() {
-        $this->dateFormat = Config::get('invoice.date.format');
-        $this->currencySymbol = Config::get('invoice.currency.symbol');
-        $this->currencyCode = strtolower(Config::get('invoice.currency.code'));
-        $this->currencyDecimalPoint = Config::get('invoice.currency.decimal_point');
-        $this->currencyThousandsSeparator = Config::get('invoice.currency.thousands_separator');
-        $this->currencyFormat = Config::get('invoice.currency.format');
-        $this->client = new Party(Config::get('invoice.seller.attributes'));
-        $this->serialNumberSequence = Config::get('invoice.serial_number.sequence');
-        $this->serialNumberSeries = Config::get('invoice.serial_number.series');
-        $this->serialNumberFormat = Config::get('invoice.serial_number.format');
-        $this->datePayUntilDays = Config::get('invoice.date.pay_until_days');
+        $this->dateFormat = Config::get('invoices.date.format');
+        $this->currencySymbol = Config::get('invoices.currency.symbol');
+        $this->currencyCode = strtolower(Config::get('invoices.currency.code'));
+        $this->currencyDecimalPoint = Config::get('invoices.currency.decimal_point');
+        $this->currencyThousandsSeparator = Config::get('invoices.currency.thousands_separator');
+        $this->currencyFormat = Config::get('invoices.currency.format');
+        $this->client = new Party(Config::get('invoices.seller.attributes'));
+        $this->serialNumberSequence = Config::get('invoices.serial_number.sequence');
+        $this->serialNumberSeries = Config::get('invoices.serial_number.series');
+        $this->serialNumberFormat = Config::get('invoices.serial_number.format');
+        $this->datePayUntilDays = Config::get('invoices.date.pay_until_days');
     }
 
     function invoice(string $buyerId, $locale) {
