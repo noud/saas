@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc0c6dc634d96812268b772b99a2ee44",
+    "content-hash": "2a31e5289b87d87c6653133e8831155f",
     "packages": [
         {
             "name": "asm89/stack-cors",
@@ -57,55 +57,6 @@
                 "stack"
             ],
             "time": "2019-12-24T22:41:47+00:00"
-        },
-        {
-            "name": "codegreencreative/laravel-samlidp",
-            "version": "v3.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/codegreencreative/laravel-samlidp.git",
-                "reference": "f95221b2ba685a498635fd92b3f73a199a92d48f"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/codegreencreative/laravel-samlidp/zipball/f95221b2ba685a498635fd92b3f73a199a92d48f",
-                "reference": "f95221b2ba685a498635fd92b3f73a199a92d48f",
-                "shasum": ""
-            },
-            "require": {
-                "forlabs/lightsaml": "^2.0",
-                "illuminate/routing": "^7.0",
-                "illuminate/support": "^7.0",
-                "php": "^7.3"
-            },
-            "type": "library",
-            "extra": {
-                "laravel": {
-                    "providers": [
-                        "CodeGreenCreative\\SamlIdp\\LaravelSamlIdpServiceProvider"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "CodeGreenCreative\\SamlIdp\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Make your Laravel application an Idenification Provider using SAML 2.0.",
-            "keywords": [
-                "SAML 2.0",
-                "SSO",
-                "acl",
-                "auth",
-                "idp",
-                "laravel",
-                "saml"
-            ],
-            "time": "2020-06-26T13:29:19+00:00"
         },
         {
             "name": "defuse/php-encryption",
@@ -586,71 +537,6 @@
                 "php"
             ],
             "time": "2020-03-25T18:49:23+00:00"
-        },
-        {
-            "name": "forlabs/lightsaml",
-            "version": "2.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/4Labs/lightSAML.git",
-                "reference": "309ddbf45de59e484937fb99f2194081c6b03ebc"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/4Labs/lightSAML/zipball/309ddbf45de59e484937fb99f2194081c6b03ebc",
-                "reference": "309ddbf45de59e484937fb99f2194081c6b03ebc",
-                "shasum": ""
-            },
-            "require": {
-                "ext-dom": "*",
-                "php": ">=5.6",
-                "robrichards/xmlseclibs": "~2.0|~3.0",
-                "symfony/event-dispatcher": "~5.0",
-                "symfony/http-foundation": "~5.0"
-            },
-            "require-dev": {
-                "monolog/monolog": "~1.3",
-                "phpunit/phpunit": "~5.7|~7",
-                "pimple/pimple": "~3.0",
-                "symfony/css-selector": "~5.0",
-                "symfony/dom-crawler": "~5.0"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "LightSaml\\Tests\\": "tests/",
-                    "LightSaml\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Milos Tomic",
-                    "email": "tmilos@gmail.com",
-                    "homepage": "https://github.com/tmilos/",
-                    "role": "Developer"
-                },
-                {
-                    "name": "Forlabs Team",
-                    "email": "hello@forlabs.fr",
-                    "homepage": "https://github.com/4Labs/",
-                    "role": "Developer"
-                }
-            ],
-            "description": "Fork of Light SAML 2.0 PHP library",
-            "homepage": "https://www.lightsaml.com/",
-            "keywords": [
-                "SAML 2.0",
-                "Single Logout",
-                "Single SignOn",
-                "library",
-                "lightSAML",
-                "php"
-            ],
-            "time": "2020-02-11T17:17:37+00:00"
         },
         {
             "name": "fruitcake/laravel-cors",
@@ -3268,44 +3154,6 @@
             "time": "2020-02-21T04:36:14+00:00"
         },
         {
-            "name": "robrichards/xmlseclibs",
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/robrichards/xmlseclibs.git",
-                "reference": "8d8e56ca7914440a8c60caff1a865e7dff1d9a5a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/8d8e56ca7914440a8c60caff1a865e7dff1d9a5a",
-                "reference": "8d8e56ca7914440a8c60caff1a865e7dff1d9a5a",
-                "shasum": ""
-            },
-            "require": {
-                "ext-openssl": "*",
-                "php": ">= 5.4"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "RobRichards\\XMLSecLibs\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "description": "A PHP library for XML Security",
-            "homepage": "https://github.com/robrichards/xmlseclibs",
-            "keywords": [
-                "security",
-                "signature",
-                "xml",
-                "xmldsig"
-            ],
-            "time": "2020-04-22T17:19:51+00:00"
-        },
-        {
             "name": "swiftmailer/swiftmailer",
             "version": "v6.2.3",
             "source": {
@@ -3593,16 +3441,16 @@
         },
         {
             "name": "symfony/error-handler",
-            "version": "v5.1.3",
+            "version": "v5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/error-handler.git",
-                "reference": "4a0d1673a4731c3cb2dea3580c73a676ecb9ed4b"
+                "reference": "525636d4b84e06c6ca72d96b6856b5b169416e6a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/error-handler/zipball/4a0d1673a4731c3cb2dea3580c73a676ecb9ed4b",
-                "reference": "4a0d1673a4731c3cb2dea3580c73a676ecb9ed4b",
+                "url": "https://api.github.com/repos/symfony/error-handler/zipball/525636d4b84e06c6ca72d96b6856b5b169416e6a",
+                "reference": "525636d4b84e06c6ca72d96b6856b5b169416e6a",
                 "shasum": ""
             },
             "require": {
@@ -3660,20 +3508,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-23T08:36:24+00:00"
+            "time": "2020-08-17T10:01:29+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
-            "version": "v5.1.3",
+            "version": "v5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
-                "reference": "7827d55911f91c070fc293ea51a06eec80797d76"
+                "reference": "94871fc0a69c3c5da57764187724cdce0755899c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/7827d55911f91c070fc293ea51a06eec80797d76",
-                "reference": "7827d55911f91c070fc293ea51a06eec80797d76",
+                "url": "https://api.github.com/repos/symfony/event-dispatcher/zipball/94871fc0a69c3c5da57764187724cdce0755899c",
+                "reference": "94871fc0a69c3c5da57764187724cdce0755899c",
                 "shasum": ""
             },
             "require": {
@@ -3746,7 +3594,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-06-18T18:24:02+00:00"
+            "time": "2020-08-13T14:19:42+00:00"
         },
         {
             "name": "symfony/event-dispatcher-contracts",
@@ -3889,16 +3737,16 @@
         },
         {
             "name": "symfony/http-foundation",
-            "version": "v5.1.3",
+            "version": "v5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-foundation.git",
-                "reference": "1f0d6627e680591c61e9176f04a0dc887b4e6702"
+                "reference": "41a4647f12870e9d41d9a7d72ff0614a27208558"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/1f0d6627e680591c61e9176f04a0dc887b4e6702",
-                "reference": "1f0d6627e680591c61e9176f04a0dc887b4e6702",
+                "url": "https://api.github.com/repos/symfony/http-foundation/zipball/41a4647f12870e9d41d9a7d72ff0614a27208558",
+                "reference": "41a4647f12870e9d41d9a7d72ff0614a27208558",
                 "shasum": ""
             },
             "require": {
@@ -3960,20 +3808,20 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-23T10:04:31+00:00"
+            "time": "2020-08-17T07:48:54+00:00"
         },
         {
             "name": "symfony/http-kernel",
-            "version": "v5.1.3",
+            "version": "v5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-kernel.git",
-                "reference": "d6dd8f6420e377970ddad0d6317d4ce4186fc6b3"
+                "reference": "3e32676e6cb5d2081c91a56783471ff8a7f7110b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/d6dd8f6420e377970ddad0d6317d4ce4186fc6b3",
-                "reference": "d6dd8f6420e377970ddad0d6317d4ce4186fc6b3",
+                "url": "https://api.github.com/repos/symfony/http-kernel/zipball/3e32676e6cb5d2081c91a56783471ff8a7f7110b",
+                "reference": "3e32676e6cb5d2081c91a56783471ff8a7f7110b",
                 "shasum": ""
             },
             "require": {
@@ -4073,7 +3921,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-07-24T04:22:56+00:00"
+            "time": "2020-09-02T08:15:18+00:00"
         },
         {
             "name": "symfony/mime",
@@ -5496,16 +5344,16 @@
         },
         {
             "name": "symfony/var-dumper",
-            "version": "v5.1.3",
+            "version": "v5.1.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/var-dumper.git",
-                "reference": "2ebe1c7bb52052624d6dc1250f4abe525655d75a"
+                "reference": "b43a3905262bcf97b2510f0621f859ca4f5287be"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/2ebe1c7bb52052624d6dc1250f4abe525655d75a",
-                "reference": "2ebe1c7bb52052624d6dc1250f4abe525655d75a",
+                "url": "https://api.github.com/repos/symfony/var-dumper/zipball/b43a3905262bcf97b2510f0621f859ca4f5287be",
+                "reference": "b43a3905262bcf97b2510f0621f859ca4f5287be",
                 "shasum": ""
             },
             "require": {
@@ -5582,7 +5430,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-06-24T13:36:18+00:00"
+            "time": "2020-08-17T07:42:30+00:00"
         },
         {
             "name": "tijsverkoyen/css-to-inline-styles",
@@ -5899,6 +5747,55 @@
         }
     ],
     "packages-dev": [
+        {
+            "name": "codegreencreative/laravel-samlidp",
+            "version": "v3.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/codegreencreative/laravel-samlidp.git",
+                "reference": "f95221b2ba685a498635fd92b3f73a199a92d48f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/codegreencreative/laravel-samlidp/zipball/f95221b2ba685a498635fd92b3f73a199a92d48f",
+                "reference": "f95221b2ba685a498635fd92b3f73a199a92d48f",
+                "shasum": ""
+            },
+            "require": {
+                "forlabs/lightsaml": "^2.0",
+                "illuminate/routing": "^7.0",
+                "illuminate/support": "^7.0",
+                "php": "^7.3"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "CodeGreenCreative\\SamlIdp\\LaravelSamlIdpServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "CodeGreenCreative\\SamlIdp\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "description": "Make your Laravel application an Idenification Provider using SAML 2.0.",
+            "keywords": [
+                "SAML 2.0",
+                "SSO",
+                "acl",
+                "auth",
+                "idp",
+                "laravel",
+                "saml"
+            ],
+            "time": "2020-06-26T13:29:19+00:00"
+        },
         {
             "name": "doctrine/cache",
             "version": "1.10.2",
@@ -6506,6 +6403,71 @@
                 "whoops"
             ],
             "time": "2020-06-14T09:00:00+00:00"
+        },
+        {
+            "name": "forlabs/lightsaml",
+            "version": "2.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/4Labs/lightSAML.git",
+                "reference": "309ddbf45de59e484937fb99f2194081c6b03ebc"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/4Labs/lightSAML/zipball/309ddbf45de59e484937fb99f2194081c6b03ebc",
+                "reference": "309ddbf45de59e484937fb99f2194081c6b03ebc",
+                "shasum": ""
+            },
+            "require": {
+                "ext-dom": "*",
+                "php": ">=5.6",
+                "robrichards/xmlseclibs": "~2.0|~3.0",
+                "symfony/event-dispatcher": "~5.0",
+                "symfony/http-foundation": "~5.0"
+            },
+            "require-dev": {
+                "monolog/monolog": "~1.3",
+                "phpunit/phpunit": "~5.7|~7",
+                "pimple/pimple": "~3.0",
+                "symfony/css-selector": "~5.0",
+                "symfony/dom-crawler": "~5.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "LightSaml\\Tests\\": "tests/",
+                    "LightSaml\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Milos Tomic",
+                    "email": "tmilos@gmail.com",
+                    "homepage": "https://github.com/tmilos/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Forlabs Team",
+                    "email": "hello@forlabs.fr",
+                    "homepage": "https://github.com/4Labs/",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Fork of Light SAML 2.0 PHP library",
+            "homepage": "https://www.lightsaml.com/",
+            "keywords": [
+                "SAML 2.0",
+                "Single Logout",
+                "Single SignOn",
+                "library",
+                "lightSAML",
+                "php"
+            ],
+            "time": "2020-02-11T17:17:37+00:00"
         },
         {
             "name": "fzaninotto/faker",
@@ -7626,6 +7588,44 @@
                 "reliese"
             ],
             "time": "2019-12-26T23:35:33+00:00"
+        },
+        {
+            "name": "robrichards/xmlseclibs",
+            "version": "3.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robrichards/xmlseclibs.git",
+                "reference": "8d8e56ca7914440a8c60caff1a865e7dff1d9a5a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robrichards/xmlseclibs/zipball/8d8e56ca7914440a8c60caff1a865e7dff1d9a5a",
+                "reference": "8d8e56ca7914440a8c60caff1a865e7dff1d9a5a",
+                "shasum": ""
+            },
+            "require": {
+                "ext-openssl": "*",
+                "php": ">= 5.4"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "RobRichards\\XMLSecLibs\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "description": "A PHP library for XML Security",
+            "homepage": "https://github.com/robrichards/xmlseclibs",
+            "keywords": [
+                "security",
+                "signature",
+                "xml",
+                "xmldsig"
+            ],
+            "time": "2020-04-22T17:19:51+00:00"
         },
         {
             "name": "scrivo/highlight.php",
