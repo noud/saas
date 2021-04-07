@@ -2617,16 +2617,16 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "2.0.29",
+            "version": "2.0.31",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "497856a8d997f640b4a516062f84228a772a48a8"
+                "reference": "233a920cb38636a43b18d428f9a8db1f0a1a08f4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/497856a8d997f640b4a516062f84228a772a48a8",
-                "reference": "497856a8d997f640b4a516062f84228a772a48a8",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/233a920cb38636a43b18d428f9a8db1f0a1a08f4",
+                "reference": "233a920cb38636a43b18d428f9a8db1f0a1a08f4",
                 "shasum": ""
             },
             "require": {
@@ -2634,7 +2634,7 @@
             },
             "require-dev": {
                 "phing/phing": "~2.7",
-                "phpunit/phpunit": "^4.8.35|^5.7|^6.0",
+                "phpunit/phpunit": "^4.8.35|^5.7|^6.0|^9.4",
                 "squizlabs/php_codesniffer": "~2.0"
             },
             "suggest": {
@@ -2718,7 +2718,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-09-08T04:24:43+00:00"
+            "time": "2021-04-06T13:56:45+00:00"
         },
         {
             "name": "psr/container",
@@ -6529,6 +6529,7 @@
                 "faker",
                 "fixtures"
             ],
+            "abandoned": true,
             "time": "2019-12-12T13:22:17+00:00"
         },
         {
@@ -6753,12 +6754,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/noud/schema-builder.git",
-                "reference": "fe877ae3f1ab476db97fe1bda20e9ab1908722c6"
+                "reference": "eb610a77cd8b6bbe11091e6578997477217a9710"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/noud/schema-builder/zipball/fe877ae3f1ab476db97fe1bda20e9ab1908722c6",
-                "reference": "fe877ae3f1ab476db97fe1bda20e9ab1908722c6",
+                "url": "https://api.github.com/repos/noud/schema-builder/zipball/eb610a77cd8b6bbe11091e6578997477217a9710",
+                "reference": "eb610a77cd8b6bbe11091e6578997477217a9710",
                 "shasum": ""
             },
             "require": {
@@ -6773,6 +6774,13 @@
                 "phpmd/phpmd": "^2.6"
             },
             "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Agontuk\\Schema\\SchemaServiceProvider"
+                    ]
+                }
+            },
             "autoload": {
                 "psr-4": {
                     "Agontuk\\Schema\\": "src/"
@@ -6799,7 +6807,7 @@
                 "schema builder",
                 "schema design"
             ],
-            "time": "2020-08-28T14:10:28+00:00"
+            "time": "2021-02-05T20:04:11+00:00"
         },
         {
             "name": "nunomaduro/collision",
@@ -8342,12 +8350,12 @@
             "version": "1.9.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/webmozart/assert.git",
+                "url": "https://github.com/webmozarts/assert.git",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/webmozart/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
+                "url": "https://api.github.com/repos/webmozarts/assert/zipball/bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "reference": "bafc69caeb4d49c39fd0779086c03a3738cbb389",
                 "shasum": ""
             },
